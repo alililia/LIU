@@ -214,22 +214,22 @@ python export.py --ckpt_file [CKPT_PATH] --device_target [DEVICE_TARGET] --file_
 
 ### Evaluation Performance
 
-| -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Model Version              | V1                                                           | V1                                                           |
-| uploaded Date              | 16/04/2021 (month/day/year)                                  | 06/05/2022 (month/day/year)                                  |
-| MindSpore Version          | 1.1.1                                                        | 1.6.1                                                        |
-| Dataset                    | ImageNet2012, cifar-10                                       | ImageNet2012, cifar-10                                       |
-| Training Parameters        | epoch=20,  batch_size = 128                                  | epoch=20,  batch_size = 128                                  |
-| Optimizer                  | Adam                                                         | Adam                                                         |
-| Loss Function              | BCELoss                                                      | BCELoss                                                      |
-| Output                     | predict class                                                | predict class                                                |
-| Accuracy                   | 310: 78.2%                                                   | 1pc: 77.8% ;  8pcs:  75.1%                                   |
-| Loss                       | 10.9852                                                      | 0.3325(Dloss); 4.6742(Gloss)                                 |
-| Speed                      | 1pc: 420 ms/step;  8pcs:  195 ms/step                        | 1pc: 104 ms/step;  8pcs:  178 ms/step                        |
-| Total time                 | 1pc: 25.32 hours                                             | 1pc: 5.79 hours;  8pcs:  1.24 hours                          |
-| Checkpoint for Fine tuning | 79.05M(.ckpt file)                                           | 69.67M(.ckpt file)                                           |
-| Scripts                    | [dcgan script](https://gitee.com/mindspore/models/tree/master/research/cv/dcgan) | [dcgan script](https://gitee.com/mindspore/models/tree/master/research/cv/dcgan) |
-
+| Parameters                 | Ascend                                                       | 
+| -------------------------- | ------------------------------------------------------------ | 
+| Model Version              | V1                                                           | 
+| Resource                   | Ascend 910; CPU 2.60GHz, 192cores; Memory, 755G              |                                                          
+| MindSpore Version          | 1.1.1                                                        | 
+| Dataset                    | ImageNet2012, cifar-10                                       | 
+| Training Parameters        | epoch=20,  batch_size = 128                                  | 
+| Optimizer                  | Adam                                                         | 
+| Loss Function              | BCELoss                                                      | 
+| Output                     | predict class                                                | 
+| Accuracy                   | 310: 78.2%                                                   | 
+| Loss                       | 10.9852                                                      | 
+| Speed                      | 1pc: 420 ms/step;  8pcs:  195 ms/step                        |
+| Total time                 | 1pc: 25.32 hours                                             | 
+| Checkpoint for Fine tuning | 79.05M(.ckpt file)                                           | 
+| Scripts                    | [dcgan script](https://gitee.com/mindspore/models/tree/master/research/cv/dcgan) |
 # [Description of Random Situation](#contents)
 
 We use random seed in train.py and cell.py for weight initialization.
