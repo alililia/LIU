@@ -92,30 +92,6 @@ DEVICE_ID=7 python eval.py --ckpt_path {checkpoint path}
 bash scripts/run_eval.sh
 ```
 
-- Running on GPU
-
-  If you are running the scripts for the first time and , you must prepare dataset and set these parameters in the `default_config.yaml`.
-
-  data_path: "YOUR_SENTENCE_DATA_PATH",     # e.g. ./Sentence-polarity-dataset-v1.0/data
-  pos_dir: "DATA_POS_FILE",                 # e.g. ./rt_polaritydata/rt-polarity.pos
-  neg_dir: "DATA_NEG_FILE",                 # e.g. ./rt_polaritydata/rt-polarity.neg
-  preprocess: "true",
-  data_root: "YOUR_SENTENCE_DATA_PATH",     # e.g. ./Sentence-polarity-dataset-v1.0/data
-  emb_path: "YOUR_SENTENCE_WORD2VEC_PATH"   # e.g. ./Sentence-polarity-dataset-v1.0/word2vec
-
-```python
-# run training
-export CUDA_VISIBLE_DEVICES=[DEVICE_ID]
-python train.py --device_target GPU
-# or you can use the shell script to train in background
-bash scripts/run_train_gpu.sh [DEVICE_ID]
-
-# run evaluating
-export CUDA_VISIBLE_DEVICES=[DEVICE_ID]
-python eval.py --ckpt_path {checkpoint path} --device_target GPU
-# or you can use the shell script to evaluate in background
-bash scripts/run_eval_gpu.sh [CKPT_FILE] [DEVICE_ID]
-```
 
 - Running on ModelArts
 
