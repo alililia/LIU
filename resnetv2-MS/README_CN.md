@@ -229,8 +229,11 @@ python export.py --ckpt_file [CKPT_PATH] --file_name [FILE_NAME] --file_format [
 
 #### Cifar10上的ResNetv2_50
 
+
+| 参数 | Ascend 910  |
 |---|---|
 | 模型版本  | ResNetv2_50 |
+| 资源  |  Ascend 910；CPU：2.60GHz，192核；内存：755G |
 | 上传日期  |2021-03-24 ;  |
 | MindSpore版本  | 1.2.0 |
 | 数据集  | Cifar10 |
