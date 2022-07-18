@@ -136,12 +136,7 @@ sh ./scripts/run_train_ascend.sh
 ```
 
 
-```bash
-```
 
-
-```bash
-```
 
 ## [Evaluation](#contents)
 
@@ -207,26 +202,31 @@ Inference result is saved in current path, you can find result in infer_output_i
 ### Training Performance
 
 
-| -------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| Model Version              | CycleGAN                                                    | CycleGAN                                                    |
-| Resource                   | Ascend 910/NV SMX2 V100-32G                                 | NV SMX2 V100-32G x 8                                        |
-| MindSpore Version          | 1.2                                                         | 1.2                                                         |
-| Dataset                    | horse2zebra                                                 | horse2zebra                                                 |
-| Training Parameters        | epoch=200, steps=1334, batch_size=1, lr=0.0002              | epoch=600, steps=166, batch_size=8, lr=0.0002               |
-| Optimizer                  | Adam                                                        | Adam                                                        |
-| Loss Function              | Mean Sqare Loss & L1 Loss                                   | Mean Sqare Loss & L1 Loss                                   |
-| outputs                    | probability                                                 | probability                                                 |
-| Checkpoint for Fine tuning | 44M (.ckpt file)                                            | 44M (.ckpt file)                                            |
+| Parameters                 | single Ascend/                                           | 
+| -------------------------- | ----------------------------------------------------------- | 
+| Model Version              | CycleGAN                                                    | 
+| Resource                   | Ascend 910                             |
+| MindSpore Version          | 1.2                                                         | 
+| Dataset                    | horse2zebra                                                 | 
+| Training Parameters        | epoch=200, steps=1334, batch_size=1, lr=0.0002              | 
+| Optimizer                  | Adam                                                        | 
+| Loss Function              | Mean Sqare Loss & L1 Loss                                   |
+| outputs                    | probability                                                 | 
+| Speed                      | 1pc(Ascend): 123 ms/step          | 
+| Total time                 | 1pc(Ascend): 9.6h                       | 
+| Checkpoint for Fine tuning | 44M (.ckpt file)                                            | 
 
 ### Evaluation Performance
 
+| Parameters          | single Ascend        |
 | ------------------- | --------------------------- |
 | Model Version       | CycleGAN                    |
-| Resource            | Ascend 910/NV SMX2 V100-32G |
+| Resource            | Ascend 910 |
 | MindSpore Version   | 1.2                         |
 | Dataset             | horse2zebra                 |
 | batch_size          | 1                           |
 | outputs             | transferred images          |
+
 
 # [ModelZoo Homepage](#contents)
 
